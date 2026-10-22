@@ -1,4 +1,4 @@
-# Commands
+# Commands -1
 
 1. pwd — Print Working Directory.
 
@@ -41,3 +41,16 @@ aryan@LAPTOP-JKAF7PUH:~/Devops-Projects$ touch commands.md
 aryan@LAPTOP-JKAF7PUH:~/Devops-Projects$ code commands.md
 ````
 
+# Commands -2
+
+Build the Project Structure
+
+1. Build the Project Structure
+
+Linux concept: You can create multiple directories with a single mkdir command by separating their names with spaces.
+
+| Directory  | Purpose                          |
+| ---------- | -------------------------------- |
+| `reports/` | Stores generated system reports. |
+| `scripts/` | Stores our Bash scripts.         |
+| `logs/`    | Stores logs that we'll analyze.  |
