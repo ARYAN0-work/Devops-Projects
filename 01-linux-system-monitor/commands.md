@@ -308,4 +308,13 @@ end:
 ls -la reports/
 cat reports/system-info.txt
 
+Output:-
+-rw-r--r-- 1 aryan aryan   29 Oct 24 10:46 backup.txt
+-rw-r--r-- 1 aryan aryan    0 Oct 22 11:29 resource-usage.txt
+-rw-r--r-- 1 aryan aryan   29 Oct 24 10:42 system-info.txt
 
+What about -rw-r--r--?
+
+You'll learn permissions in detail later. For now, understand that Linux tracks who can read, write, and execute each file.
+
+Your files have read/write permissions for their owner and read permissions for other users.
