@@ -318,3 +318,86 @@ What about -rw-r--r--?
 You'll learn permissions in detail later. For now, understand that Linux tracks who can read, write, and execute each file.
 
 Your files have read/write permissions for their owner and read permissions for other users.
+
+
+# 4: Learn to Read and Search Files
+
+less
+head
+tail
+grep
+
+2. less — Read files page by page
+
+Imagine a log file contains 10,000 lines. Printing everything at once would be inconvenient.
+
+less lets you navigate through a file interactively.
+
+| Key     | Action                         |
+| ------- | ------------------------------ |
+| `Space` | Move forward one page          |
+| `b`     | Move backward one page         |
+| `/word` | Search for a word              |
+| `n`     | Jump to the next search result |
+| `q`     | Quit                           |
+
+
+3. head — Read the beginning of a file
+head commands.md
+
+By default, head displays the first 10 lines.
+
+`````bash
+You can specify a different number:
+
+head -n 5 commands.md
+
+This displays the first five lines.
+
+Real-world use: Quickly inspect the beginning of a configuration file or log.
+`````
+
+4. tail — Read the end of a file
+
+Run:
+
+tail commands.md
+
+By default, tail displays the last 10 lines.
+
+To display the last three lines:
+
+tail -n 3 commands.md
+
+````bash
+
+A useful Linux server trick
+tail -f logs/system.log
+
+The -f option follows the file, displaying new lines as they're appended.
+
+This is useful for watching application logs in real time.
+
+````
+
+5. grep — Search for text
+
+Suppose you want to find every occurrence of Linux in your documentation.
+
+Run:
+
+grep "Linux" commands.md
+
+grep searches for matching text and prints the lines containing it.
+
+Try a case-insensitive search:
+
+grep -i "linux" commands.md
+
+The -i option ignores differences between uppercase and lowercase letters.
+
+To display matching lines with their line numbers:
+
+grep -n "Linux" commands.md
+
+Real-world use: Search logs for errors, warnings, IP addresses, or specific events.
