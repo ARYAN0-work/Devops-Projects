@@ -266,3 +266,46 @@ Execution:
 - echo prints the message.
 - # Show the current user is another comment.
 - whoami prints the current username.
+
+# Next Task:-
+
+- ls reports/
+- cat reports/system-info.txt
+- echo "My first Linux system report" > reports/system-info.txt
+
+```bash
+
+What just happened?
+
+- echo prints the text.
+- > redirects that output into a file.
+- cat displays the file's contents.
+
+```
+
+- cp — Copy files :- Let's make a backup of our report.
+
+> cp reports/system-info.txt reports/system-info-backup.txt
+
+- mv — Move or rename files :- Linux uses the same command for both operations.
+
+Let's rename our backup:
+
+- mv reports/system-info-backup.txt reports/backup.txt. 
+
+```bash
+
+Remember:
+
+cp creates a copy.
+mv moves a file or renames it.
+```
+
+> rm — Delete files
+
+end:
+
+ls -la reports/
+cat reports/system-info.txt
+
+
