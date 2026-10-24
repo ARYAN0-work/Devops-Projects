@@ -192,3 +192,77 @@ What does rm mean?
 It removes files. Be careful: deleting a file with rm generally doesn't move it to your desktop's recycle bin.
 
 `````
+
+3. Now let's make our first script!
+
+- nano scripts/system-info.sh
+
+Enter these:-
+
+#!/bin/bash
+
+echo "===== Linux System Information ====="
+echo ""
+
+echo "Current Date and Time:"
+date
+
+echo ""
+echo "System Uptime:"
+uptime
+
+echo ""
+echo "Current User:"
+whoami
+
+echo ""
+echo "Hostname:"
+hostname
+
+# then :-
+
+Save the file
+
+Inside Nano:
+
+- Press Ctrl + O to save.
+- Press Enter to confirm the filename.
+- Press Ctrl + X to exit.
+
+Run your script
+
+First, give it executable permission:
+
+- chmod +x scripts/system-info.sh
+
+Then execute it:
+
+./scripts/system-info.sh
+
+You should see your system's date, uptime, username, and hostname printed in the terminal.
+
+> SUMMARY:-
+
+| Command                    | Purpose                                   |
+| -------------------------- | ----------------------------------------- |
+| `nano`                     | Edit a file in the terminal               |
+| `echo`                     | Print text                                |
+| `date`                     | Display the current date and time         |
+| `uptime`                   | Show how long the system has been running |
+| `whoami`                   | Display the current username              |
+| `hostname`                 | Display the system's hostname             |
+| `chmod +x`                 | Add executable permission                 |
+| `./scripts/system-info.sh` | Execute the script at that path           |
+
+> One last concept: #!/bin/bash is called a shebang. It tells the operating system to use Bash to interpret the script when you execute it directly.
+
+
+> is used for comments in shell scripting, but #!/bin/bash has a special purpose. Let's understand the difference.
+
+Execution:
+
+- #!/bin/bash selects the interpreter when the script is executed directly.
+- # Display system information is a comment.
+- echo prints the message.
+- # Show the current user is another comment.
+- whoami prints the current username.
