@@ -386,18 +386,22 @@ Suppose you want to find every occurrence of Linux in your documentation.
 
 Run:
 
-grep "Linux" commands.md
+> grep "Linux" commands.md
 
 grep searches for matching text and prints the lines containing it.
 
 Try a case-insensitive search:
 
-grep -i "linux" commands.md
+> grep -i "linux" commands.md
 
 The -i option ignores differences between uppercase and lowercase letters.
 
 To display matching lines with their line numbers:
 
-grep -n "Linux" commands.md
+> grep -n "Linux" commands.md => It searches for Linux and displays the line numbers of matching lines.
 
 Real-world use: Search logs for errors, warnings, IP addresses, or specific events.
+
+> grep -in "linux" commands.md
+-i ignores case differences: Linux, LINUX, and linux can all match.
+-n displays the line numbers.
