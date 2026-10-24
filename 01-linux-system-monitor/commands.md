@@ -436,3 +436,14 @@ echo "INFO: Monitoring active" >> logs/system.log
 
 cat logs/system.log
 
+# EXTRA
+
+| Log level | Meaning                                                             | Example                                   |
+| --------- | ------------------------------------------------------------------- | ----------------------------------------- |
+| `DEBUG`   | Detailed information useful for debugging                           | `DEBUG: Checking database connection`     |
+| `INFO`    | Something normal or informative happened                            | `INFO: System started`                    |
+| `WARN`    | Something unexpected happened; attention may be needed              | `WARN: Memory usage is high`              |
+| `ERROR`   | An operation failed or encountered a problem                        | `ERROR: Database connection failed`       |
+| `FATAL`   | A critical failure that may prevent the application from continuing | `FATAL: Unable to initialize application` |
+
+Important: These labels are conventions, not special Linux keywords. You could write BANANA in your log, and Linux would still store it as text!
