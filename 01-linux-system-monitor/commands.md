@@ -87,6 +87,8 @@ The parent directory must already exist.
 
 4. Verify your project structure
 
+ls -R
+
 - What does -R mean?
 
 ls = List files and directories.
@@ -158,3 +160,35 @@ Same logic. It shows the contents of your reports directory.
 It shows the contents of your scripts directory.
 
 ````
+
+> What the hell is .sh?
+
+A shell script is a file containing Linux commands that you can execute together instead of typing them individually.
+
+For example, imagine you want to run these commands every day:
+
+date
+uptime
+free -h
+df -h
+
+You could save them in a file called system-info.sh and execute that file whenever you need the information.
+
+- Idea-behind it:-
+
+| Extension | Typical purpose               | Example           |
+| --------- | ----------------------------- | ----------------- |
+| `.txt`    | Store ordinary text           | `system-info.txt` |
+| `.sh`     | Store shell commands          | `system-info.sh`  |
+| `.log`    | Store log entries             | `system.log`      |
+| `.md`     | Store formatted documentation | `commands.md`     |
+
+
+`````bash
+rm test.txt
+
+What does rm mean?
+
+It removes files. Be careful: deleting a file with rm generally doesn't move it to your desktop's recycle bin.
+
+`````
