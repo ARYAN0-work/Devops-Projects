@@ -447,3 +447,7 @@ cat logs/system.log
 | `FATAL`   | A critical failure that may prevent the application from continuing | `FATAL: Unable to initialize application` |
 
 Important: These labels are conventions, not special Linux keywords. You could write BANANA in your log, and Linux would still store it as text!
+
+# apply to linux project
+
+> grep -c "ERROR" logs/system.log => The -c option counts the matching lines. => it returns the total no. of file it contains that keyword

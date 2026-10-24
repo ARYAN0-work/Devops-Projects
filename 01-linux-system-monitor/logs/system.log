@@ -1,3 +1,5 @@
 INFO: System started
 ERROR: Disk space low
 INFO: Monitoring active
+WARN: Memory usage is high
+ERROR: Service failed to start
