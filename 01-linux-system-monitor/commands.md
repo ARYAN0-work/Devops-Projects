@@ -405,3 +405,34 @@ Real-world use: Search logs for errors, warnings, IP addresses, or specific even
 > grep -in "linux" commands.md
 -i ignores case differences: Linux, LINUX, and linux can all match.
 -n displays the line numbers.
+
+# Next Lesson: Pipes and Redirection
+
+- Search your log file for errors.
+- Count how many errors occurred.
+- Save the results to a report.
+
+| Operator | Purpose                                            | Example                        |
+| -------- | -------------------------------------------------- | ------------------------------ |
+| `>`      | Write output to a file, replacing existing content | `echo "Hello" > test.txt`      |
+| `>>`     | Append output to a file                            | `echo "World" >> test.txt`     |
+| `\|`     | Pass one command's output to another command       | `cat test.txt \| grep "Hello"` |
+
+# assigments
+
+1. Create a sample log entry.
+
+echo "INFO: System started" > logs/system.log
+
+2. Append another entry.
+
+echo "ERROR: Disk space low" >> logs/system.log
+
+3. Append a third entry.
+
+echo "INFO: Monitoring active" >> logs/system.log
+
+4. Display the log.
+
+cat logs/system.log
+
