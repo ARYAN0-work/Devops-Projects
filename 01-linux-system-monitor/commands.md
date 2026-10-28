@@ -489,3 +489,78 @@ Notice the difference:
 These are fundamental Linux skills for log analysis and automation.
 ```````
 
+# Step 5: Monitor System Resources
+
+Our next mission is to inspect your Linux machine's CPU, memory, disk usage, and running processes.
+
+1. Check memory usage — free
+
+free -h
+
+> What it does: Displays your system's memory usage.
+
+- free — Shows memory statistics.
+- -h — Displays sizes in a human-readable format, such as MiB or GiB.
+
+EX output:-
+
+               total   used   free   shared  buff/cache  available
+Mem:            7.6Gi  2.1Gi  3.2Gi   100Mi       2.3Gi      5.1Gi
+Swap:           2.0Gi     0B  2.0Gi
+
+2. Check disk space — df
+df -h
+
+> What it does: Displays filesystem disk-space usage.
+
+| Column       | Meaning                            |
+| ------------ | ---------------------------------- |
+| `Filesystem` | The filesystem or storage device   |
+| `Size`       | Total filesystem size              |
+| `Used`       | Space currently used               |
+| `Avail`      | Available space                    |
+| `Use%`       | Percentage of space used           |
+| `Mounted on` | Where the filesystem is accessible |
+
+3. Check your project's disk usage — du
+du -sh .
+
+>What it does: Shows the total disk usage of your current project directory.
+
+Breaking it down:
+
+du — Estimates disk usage.
+-s — Shows a summary instead of listing every subdirectory.
+-h — Uses human-readable units.
+. — Refers to your current directory.
+
+>This is useful when you want to understand how much space a project occupies
+
+4. Check CPU and running processes
+top
+
+You'll see a live display of running processes and system resource usage.
+
+Look for:
+
+CPU usage.
+Memory usage.
+Process IDs (PIDs).
+Processes consuming the most resources.
+
+To exit, press q.
+
+Note: Because you're using WSL on Windows, some resource statistics may reflect the Linux environment or its virtualized resource limits rather than the entire Windows machine.
+
+5. List running processes — ps
+ps aux
+
+This displays a snapshot of running processes visible to your Linux environment.
+
+| Column    | Meaning                             |
+| --------- | ----------------------------------- |
+| `USER`    | Process owner                       |
+| `PID`     | Process ID                          |
+| `%CPU`    | CPU usage                           |
+| `%MEM`    | Memory usage                        |
+| `COMMAND` | Command associated with the process |
