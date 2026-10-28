@@ -451,3 +451,41 @@ Important: These labels are conventions, not special Linux keywords. You could w
 # apply to linux project
 
 > grep -c "ERROR" logs/system.log => The -c option counts the matching lines. => it returns the total no. of file it contains that keyword
+
+## NEXT : PIPES
+
+Imagine you want to:
+
+Read your log.
+Find errors.
+Count the matching lines.
+
+Linux lets us connect commands using a pipe (|).
+
+> Step 1: Display only errors
+grep "ERROR" logs/system.log
+
+> Step 2: Count errors using a pipe
+grep "ERROR" logs/system.log | wc -l
+
+| Component      | Meaning                        |                                       |
+| -------------- | ------------------------------ | ------------------------------------- |
+| `grep "ERROR"` | Finds lines containing `ERROR` |                                       |
+| `              | `                              | Passes the output to the next command |
+| `wc -l`        | Counts the lines received      |                                       |
+
+
+**Key concept: The pipe passes one command's output directly to another command as input.**
+
+```````bash
+The matching error lines should appear.
+
+Notice the difference:
+
+| passes output to another command.
+> writes output to a file, replacing its existing contents.
+>> appends output to a file without replacing existing contents.
+
+These are fundamental Linux skills for log analysis and automation.
+```````
+
