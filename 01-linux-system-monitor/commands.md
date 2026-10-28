@@ -564,3 +564,57 @@ This displays a snapshot of running processes visible to your Linux environment.
 | `%CPU`    | CPU usage                           |
 | `%MEM`    | Memory usage                        |
 | `COMMAND` | Command associated with the process |
+
+
+`````````bash
+Step 6: Build system-monitor.sh
+Our objective
+
+Create a Bash script that automatically collects:
+
+Current date and time
+System uptime
+Memory usage
+Disk usage
+Running processes
+
+Instead of typing five commands every time, we'll run one script.
+`````````
+
+1. Open your script
+nano scripts/system-monitor.sh
+
+2. Write the script
+
+blah blah blah
+
+| Command     | Purpose                                    |
+| ----------- | ------------------------------------------ |
+| `date`      | Displays the current date and time         |
+| `uptime`    | Shows how long the system has been running |
+| `free -h`   | Displays memory statistics                 |
+| `df -h`     | Displays filesystem disk usage             |
+| `ps aux`    | Lists running processes                    |
+| `head -n 6` | Displays the first six lines of that list  |
+| `echo`      | Prints headings to organize the output     |
+
+# something new 
+
+New concept:
+
+ps aux | head -n 6
+
+The pipe (|) passes the output of ps aux to head, which displays only the first six lines. The first line is usually the column header, followed by up to five process entries.
+
+3. Save the file
+
+4. Give the script executable permission
+chmod +x scripts/system-monitor.sh
+
+- This adds executable permission to the file.
+
+5. Run your monitoring tool
+
+./scripts/system-monitor.sh
+
+You should see a neatly organized report containing your system information, memory statistics, disk usage, and running processes.
