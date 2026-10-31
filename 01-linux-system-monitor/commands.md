@@ -618,3 +618,4 @@ chmod +x scripts/system-monitor.sh
 ./scripts/system-monitor.sh
 
 You should see a neatly organized report containing your system information, memory statistics, disk usage, and running processes.
+

@@ -1,0 +1,44 @@
+==================================
+       LINUX SYSTEM MONITOR
+==================================
+
+Date and Time:
+Sat Oct 31 12:50:22 UTC 2026
+
+System Uptime:
+ 12:50:22 up  1:57,  1 user,  load average: 0.19, 0.24, 0.19
+
+Memory Usage:
+               total        used        free      shared  buff/cache   available
+Mem:           7.8Gi       3.1Gi       4.2Gi        17Mi       594Mi       4.6Gi
+Swap:          8.0Gi          0B       8.0Gi
+
+Disk Usage:
+Filesystem      Size  Used Avail Use% Mounted on
+none            3.9G     0  3.9G   0% /usr/lib/modules/6.18.33.2-microsoft-standard-WSL2
+none            3.9G  4.0K  3.9G   1% /mnt/wsl
+drivers         134G  125G  9.3G  94% /usr/lib/wsl/drivers
+/dev/sdd       1007G   50G  907G   6% /
+none            3.9G   40K  3.9G   1% /mnt/wslg
+none            3.9G     0  3.9G   0% /usr/lib/wsl/lib
+rootfs          3.9G  2.8M  3.9G   1% /init
+none            3.9G  492K  3.9G   1% /run
+none            3.9G     0  3.9G   0% /run/lock
+none            3.9G  1.1M  3.9G   1% /run/shm
+none            3.9G   80K  3.9G   1% /mnt/wslg/versions.txt
+none            3.9G   80K  3.9G   1% /mnt/wslg/doc
+C:\             134G  125G  9.3G  94% /mnt/c
+D:\             342G  102G  241G  30% /mnt/d
+tmpfs           795M   20K  795M   1% /run/user/1000
+
+Running Processes:
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1  21708 13104 ?        Ss   11:02   0:02 /sbin/init
+root           2  0.0  0.0   3180  2204 hvc0     Sl+  11:02   0:00 /init
+root           7  0.0  0.0   3180  2044 hvc0     Sl+  11:02   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root          47  0.0  0.2  50460 16440 ?        S<s  11:02   0:00 /usr/lib/systemd/systemd-journald
+root          99  0.0  0.0  25428  6864 ?        Ss   11:02   0:03 /usr/lib/systemd/systemd-udevd
+
+==================================
+       MONITORING COMPLETE
+==================================
